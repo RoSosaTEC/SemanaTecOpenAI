@@ -4,6 +4,7 @@ from openai import OpenAI
 
 # {"model": "gpt-3.5-turbo", "prompt": "Write a romantic story about an alien and a human astronaut", "max_tokens": 100, "temperature": 1}
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
+secret_key = "aqui va la secret key"
 
 @app.route(route="firstfunctionapi")
 def firstfunctionapi(req: func.HttpRequest) -> func.HttpResponse:
